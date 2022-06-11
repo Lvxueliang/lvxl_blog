@@ -1,9 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import {Menu} from 'antd'
 
+const items = [
+  {
+      key: '1',
+      label: '首页'
+  },
+  {
+      key: '2',
+      label: '文章'
+  }
+]
 const name = "Lvxl";
 export const siteTitle = "Lvxl_Blog";
 
@@ -15,12 +26,12 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="lvxl blog 博客"
         />
         <meta
           property="og:image"
@@ -32,14 +43,20 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        <Link href='/'>
+          <a >
+            <Image src="/images/user.png" width={50} height={50} priority></Image>
+          </a>
+        </Link>
+        <Menu className={styles.menu} mode="horizontal" items={items}></Menu>
+        {/* {home ? (
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/user.png"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={100}
+              width={100}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
@@ -50,7 +67,7 @@ export default function Layout({
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/user.png"
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
@@ -64,7 +81,7 @@ export default function Layout({
               </Link>
             </h2>
           </>
-        )}
+        )} */}
       </header>
       <main>{children}</main>
       {!home && (

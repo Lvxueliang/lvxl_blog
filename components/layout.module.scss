@@ -5,9 +5,17 @@
 }
 
 .header {
+  width: 100vw;
+  height: 6vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  .menu{
+    height: 6vh;
+    line-height: 5vh;
+  }
 }
 
 .backToHome {
