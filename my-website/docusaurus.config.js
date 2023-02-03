@@ -67,18 +67,18 @@ const config = {
         title: 'Lvxl',
         logo: {
           alt: 'Lvxl Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.jpeg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'left',
-            label: 'Tutorial',
+            label: '学习之道',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '面试之道', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Lvxueliang/lvxl_blog',
             label: 'GitHub',
             position: 'right',
           },
