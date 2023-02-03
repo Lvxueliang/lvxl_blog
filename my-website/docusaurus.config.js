@@ -88,11 +88,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Lvxl',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '学习之道',
+                to: '/docs/index',
               },
             ],
           },
