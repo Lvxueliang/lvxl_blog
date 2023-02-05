@@ -1,0 +1,26 @@
+# diff算法
+
+`diff算法` 本质就是找不同,相同的地方不用管了
+
+`虚拟dom` 本质上就是一个对象,该对象描述了一个ui节点所对应的一些必要信息
+
+真实dom:
+```html
+<div class="lvxl"> hello </div>
+```
+
+虚拟dom:
+```js
+const virtualNode = {
+    type: 'div',
+    content: 'hello',
+    props: {
+        class: 'lvxl'
+    }
+}
+```
+
+**那么,我们为什么需要虚拟dom?**
+
+因为真实dom在创建时自身会携带非常多的属性, 我们知道最终我要进行diff的时候是需要本体和参照物的, 实现的方式也是将dom上的属性递归对比, 属性越多性能开销越大
+
