@@ -28,11 +28,11 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: '我想搞钱',
+    title: '要转行吗',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        很庸俗
+        ???
       </>
     ),
   },
