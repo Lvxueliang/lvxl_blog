@@ -39,18 +39,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+        // question: {
+        //   showReadingTime: true,
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -77,6 +72,8 @@ const config = {
             label: '学习之道',
           },
           {to: '/blog', label: '面试之道', position: 'left'},
+          {to: '/question', label: '题目', position: 'left'},
+
           {
             href: 'https://github.com/Lvxueliang/lvxl_blog',
             label: 'GitHub',
@@ -134,6 +131,27 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+    plugins: [
+      [
+        '@docusaurus/plugin-content-blog',
+        {
+          /**
+           * Required for any multi-instance plugin
+           */
+          id: 'second-blog',
+          /**
+           * URL route for the blog section of your site.
+           * *DO NOT* include a trailing slash.
+           */
+          routeBasePath: 'question',
+          /**
+           * Path to data on filesystem relative to site dir.
+           */
+          path: './question',
+        },
+      ],
+    ],
 };
 
 module.exports = config;
