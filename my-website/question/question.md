@@ -108,7 +108,6 @@ f1()
 
 考点: js计算精度问题
 ```js
-
 // 对于这个问题，一个直接的解决方法就是设置一个误差范围，通常称为“机器精度”。对JavaScript来说，这个值通常为2-52，在ES6中，提供了Number.EPSILON属性，而它的值就是2-52，只要判断0.1+0.2-0.3是否小于Number.EPSILON，如果小于，就可以判断为0.1+0.2 ===0.3
 
 function numberepsilon(arg1,arg2){                   
@@ -117,3 +116,55 @@ function numberepsilon(arg1,arg2){
 
 console.log(numberepsilon(0.1 + 0.2, 0.3)); // true
 ```
+
+
+考点: 二叉树
+将[3,9,null,null,15,7] 转为树形结构
+```js
+// 1. 定义一个树节点类，包含节点值、左子节点和右子节点：
+class TreeNode  {
+    constructor(val) {
+        this.val = val 
+        this.left = null 
+        this.right = null 
+    }
+}
+// 2.定义一个函数，接受一个数组作为参数，并返回构建好的树的根节点：
+function buildTree(arr) {
+    if (!arr || !arr.length) return null;
+
+    // 创建根节点
+    const root = new TreeNode(arr[0])
+    // 层序遍历创建树
+    const queue = [root]
+    let i = 1;
+    while(queue.length > 0 && i <arr.lenght) {
+        const node = queue.shift()
+        //左子节点
+        if(arr[i] !== null) {
+            const left = new TreeNode(arr[i]);
+            node.left = left
+            queue.push(left)
+        }
+        i++;
+    }
+}
+
+```
+
+(a == 1 && a == 2 && a == 3)
+
+```js
+
+let obj = {
+  value: 1,
+  get a() {
+    return this.value++;
+  }
+};
+
+console.log(a == 1 && a == 2 && a == 3); // 输出 true
+```
+
+
+对象的扁平化
