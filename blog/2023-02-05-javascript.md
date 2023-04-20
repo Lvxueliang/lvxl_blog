@@ -1,3 +1,12 @@
+---
+slug: js
+title: JAVASCRIPT
+authors: [Lvxl]
+tags: [js]
+---
+
+
+
 # JAVASCRIPT
 
 ### 事件委托 DOM事件流

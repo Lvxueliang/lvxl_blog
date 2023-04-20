@@ -41,11 +41,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
-          showReadingTime: true,
+          blogSidebarTitle: '知识点',
+          blogSidebarCount: 'ALL'
         },
-        // question: {
-        //   showReadingTime: true,
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -132,26 +130,28 @@ const config = {
       },
     }),
 
-    plugins: [
-      [
-        '@docusaurus/plugin-content-blog',
-        {
-          /**
-           * Required for any multi-instance plugin
-           */
-          id: 'second-blog',
-          /**
-           * URL route for the blog section of your site.
-           * *DO NOT* include a trailing slash.
-           */
-          routeBasePath: 'question',
-          /**
-           * Path to data on filesystem relative to site dir.
-           */
-          path: './question',
-        },
-      ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'question',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'question',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './question',
+        blogSidebarTitle: '题目详解',
+        blogSidebarCount: 'ALL'
+      },
     ],
+  ],
 };
 
 module.exports = config;
