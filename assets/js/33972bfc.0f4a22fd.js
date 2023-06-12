@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7431],{6651:e=>{e.exports=JSON.parse('{"label":"browers","permalink":"/lvxl_blog/blog/tags/browers","allTagsPath":"/lvxl_blog/blog/tags","count":1}')}}]);
