@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://lvxueliang.github.io',
+  url: 'http://ec2-13-213-53-0.ap-southeast-1.compute.amazonaws.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/lvxl_blog/',
@@ -71,6 +71,7 @@ const config = {
           },
           {to: '/blog', label: '面试之道', position: 'left'},
           {to: '/question', label: '题目', position: 'left'},
+          {to: '/java', label: 'JAVA', position: 'left'},
 
           {
             href: 'https://github.com/Lvxueliang/lvxl_blog',
