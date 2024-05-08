@@ -38,7 +38,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
+          breadcrumbs: true,
         },
         blog: {
           blogSidebarTitle: '知识点',
@@ -63,16 +66,10 @@ const config = {
           src: 'img/logo.jpeg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
-            label: '学习之道',
-          },
+          {to: '/docs', label: '前端知识库', position: 'left'},
+          {to: '/java', label: '后端知识库', position: 'left'},
           {to: '/blog', label: '面试之道', position: 'left'},
           {to: '/question', label: '题目', position: 'left'},
-          {to: '/java', label: 'JAVA', position: 'left'},
-
           {
             href: 'https://github.com/Lvxueliang/lvxl_blog',
             label: 'GitHub',
@@ -132,6 +129,9 @@ const config = {
     }),
 
   plugins: [
+    [ '@docusaurus/plugin-content-docs',
+    { id: 'java' , path: 'java', routeBasePath: 'java', sidebarPath: require.resolve('./sidebars.js'), }
+  ],
     [
       '@docusaurus/plugin-content-blog',
       {
