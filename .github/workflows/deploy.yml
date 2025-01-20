@@ -39,5 +39,7 @@ jobs:
       - name: build
         run: pnpm run build
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@master
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with: 
+          branch: lvxl-pages
+          folder: build
