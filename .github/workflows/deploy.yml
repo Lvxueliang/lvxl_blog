@@ -9,13 +9,19 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+# concurrency:
+#   group: "pages"
+#   cancel-in-progress: false
 
 jobs:
   # Single deploy job since we're just deploying
@@ -23,9 +29,9 @@ jobs:
     # permissions:
     #   pages: write      # to deploy to Pages
     #   id-token: write   # to verify the deployment originates from an appropriate source
-    # environment:
-    #   name: lvxl-pages
-    #   url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: lvxl-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: check-branch
@@ -41,19 +47,9 @@ jobs:
         run: pnpm i
       - name: build
         run: pnpm run build
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with: 
-          branch: lvxl-pages
-          folder: build
-      # - name: Output deployment URL  # 新增步骤以输出部署路径
-      #   run: |
-      #     if [ -n "${{ steps.deployment.outputs.page_url }}" ]; then
-      #       echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
-      #     else
-      #       echo "Deployment URL not available."
-      #     fi
-      # Ensure the commented-out section is properly indented and does not interfere with the YAML structure
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN  }}
+          publish_dir: ./build
+          publish_branch: gh-pages
