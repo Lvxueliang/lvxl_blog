@@ -20,8 +20,12 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    needs: build
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
     environment:
-      name: github-pages
+      name: lvxl-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
@@ -38,8 +42,11 @@ jobs:
         run: pnpm i
       - name: build
         run: pnpm run build
+      # - name: Deploy to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@4.0.0
+      #   with: 
+      #     branch: lvxl-pages
+      #     folder: build
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with: 
-          branch: lvxl-pages
-          folder: build
+        id: deployment
+        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
