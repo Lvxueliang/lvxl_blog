@@ -26,16 +26,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check-branch
-      uses: actions/checkout@master
+        uses: actions/checkout@master
       - name: set-Node
-      uses: actions/setup-node@master
-      with:
+        uses: actions/setup-node@master
+        with:
           node-version: 18
           registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish
       - name: npm i
         run: npm install
       - name: build
-      run: npm run build
+        run: npm run build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@lvxl-blog
