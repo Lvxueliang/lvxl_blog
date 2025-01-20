@@ -29,19 +29,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: 检查master分支
+      - name: check-branch
       uses: actions/checkout@master
 
-    - name: 设置Node.js
+    - name: set-Node.js
       uses: actions/setup-node@master
       with:
           node-version: 18
           registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish
       
-      - name: 安装依赖
+      - name: npm i
         run: npm install
 
-      - name: 打包
+      - name: build
       run: npm run build
       
       - name: Deploy to GitHub Pages
