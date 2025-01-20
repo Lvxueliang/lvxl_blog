@@ -23,9 +23,9 @@ jobs:
     # permissions:
     #   pages: write      # to deploy to Pages
     #   id-token: write   # to verify the deployment originates from an appropriate source
-    environment:
-      name: lvxl-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+    #   name: lvxl-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: check-branch
@@ -45,14 +45,13 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with: 
           branch: lvxl-pages
-          folder: build
-      - name: Output deployment URL  # 新增步骤以输出部署路径
-        run: |
-          if [ -n "${{ steps.deployment.outputs.page_url }}" ]; then
-            echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
-          else
-            echo "Deployment URL not available."
-          fi
+      # - name: Output deployment URL  # 新增步骤以输出部署路径
+      #   run: |
+      #     if [ -n "${{ steps.deployment.outputs.page_url }}" ]; then
+      #       echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
+      #     else
+      #       echo "Deployment URL not available."
+      #     fi
       # Ensure the commented-out section is properly indented and does not interfere with the YAML structure
       # - name: Deploy to GitHub Pages
       #   id: deployment
