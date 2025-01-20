@@ -45,6 +45,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with: 
           branch: lvxl-pages
+          folder: build
       # - name: Output deployment URL  # 新增步骤以输出部署路径
       #   run: |
       #     if [ -n "${{ steps.deployment.outputs.page_url }}" ]; then
