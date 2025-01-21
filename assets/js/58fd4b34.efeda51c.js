@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[765],{3044:l=>{l.exports=JSON.parse('{"label":"call","permalink":"/lvxl_blog/blog/tags/call","allTagsPath":"/lvxl_blog/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8944],{7350:e=>{e.exports=JSON.parse('{"label":"Vue2","permalink":"/lvxl_blog/blog/tags/vue-2","allTagsPath":"/lvxl_blog/blog/tags","count":2}')}}]);
