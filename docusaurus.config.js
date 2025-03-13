@@ -10,16 +10,10 @@ const config = {
   tagline: 'Love for Wx1n',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'http://ec2-13-213-53-0.ap-southeast-1.compute.amazonaws.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Lvxueliang', // Usually your GitHub org/user name.
-  projectName: '', // Usually your repo name.
+  url: 'https://lvxueliang.github.io',    // 当前页面的url，setting里面 都可以看到部署后的url
+  baseUrl: '/',   // 这里看自己需要添加，如果添加为/win/  访问主页就是 https://yingwinwin.github.io/win/
+  organizationName: 'lvxueliang', // 这里是你github的名字
+  projectName: 'lvxueliang.github.io', // 这个是你要部署到的github的项目名字
   deploymentBranch: "lv-pages",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
