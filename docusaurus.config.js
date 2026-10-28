@@ -38,8 +38,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs',
-          routeBasePath: 'docs',
+          path: 'front',
+          routeBasePath: 'front',
           sidebarPath: require.resolve('./sidebars.js'),
           breadcrumbs: true,
         },
@@ -66,8 +66,8 @@ const config = {
           src: 'img/logo.jpeg',
         },
         items: [
-          {to: '/docs', label: '前端知识库', position: 'left'},
-          {to: '/java', label: '后端知识库', position: 'left'},
+          {to: '/front', label: '前端知识库', position: 'left'},
+          {to: '/backend', label: '后端知识库', position: 'left'},
           {to: '/blog', label: '面试之道', position: 'left'},
           {to: '/question', label: '题目', position: 'left'},
           {
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: '学习之道',
-                to: '/docs',
+                to: '/front',
               },
             ],
           },
@@ -130,7 +130,7 @@ const config = {
 
   plugins: [
     [ '@docusaurus/plugin-content-docs',
-    { id: 'java' , path: 'java', routeBasePath: 'java', sidebarPath: require.resolve('./sidebars.js'), }
+    { id: 'backend' , path: 'backend', routeBasePath: 'backend', sidebarPath: require.resolve('./sidebars.js'), }
   ],
     [
       '@docusaurus/plugin-content-blog',
