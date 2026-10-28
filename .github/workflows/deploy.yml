@@ -28,7 +28,7 @@ jobs:
       - name: set-Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18.16.0
+          node-version: 24.2.0
           registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish
       - name: npm i
         run: npm install pnpm@10 -g
