@@ -11,8 +11,8 @@ const config = {
   tagline: 'Love for Wx1n',
   favicon: 'img/favicon.ico',
 
-  url: 'https://lvxueliang.github.io/',    // 当前页面的url，setting里面 都可以看到部署后的url
-  baseUrl: '/',   // 这里看自己需要添加，如果添加为/win/  访问主页就是 https://yingwinwin.github.io/win/
+  url: 'https://lvxueliang.github.io/',    // 站点域名，GitHub Pages 项目站点固定为 https://<用户名>.github.io/
+  baseUrl: '/lvxl_blog/',   // 必须是 /<仓库名>/ ；只有仓库改名为 <用户名>.github.io 后才能改成 '/'
   organizationName: 'lvxueliang', // 这里是你github的名字
   projectName: 'lvxl_blog', // 这个是你要部署到的github的项目名字
   deploymentBranch: "lvxl-pages",
