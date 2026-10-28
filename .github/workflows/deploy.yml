@@ -1,44 +1,57 @@
-# Simple workflow for deploying static content to GitHub Pages
+# 构建 Docusaurus 站点并推送到 lvxl-pages 分支，由 GitHub Pages 对外服务
 name: Deploy lvxl_blog
 
 on:
-  # Runs on pushes targeting the default branch
+  # 推送到默认分支时触发
   push:
     branches: ["master"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # 允许在 Actions 页面手动触发
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限，peaceiris 需要用其推送 lvxl-pages 分支
+# peaceiris 需要写权限，才能推送 lvxl-pages 分支
 permissions:
   contents: write
 
-# 同一时间只允许一个部署，排队中的旧 run 不取消，避免并发强推 lvxl-pages 互相覆盖
+# 同一时间只允许一个部署；排队中的 run 不取消，避免并发强推 lvxl-pages 互相覆盖
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: check-branch
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: set-Node
+
+      # 先装 pnpm，下面 setup-node 的 cache: pnpm 依赖它
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24.2.0
-          registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish
-      - name: npm i
-        run: npm install pnpm@10 -g
-      - name: pnpm i
-        run: pnpm i
-      - name: build
+          node-version: 24
+          cache: pnpm
+
+      # CI 环境下 pnpm 默认 frozen-lockfile，锁文件与 package.json 不一致会直接失败
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
         run: pnpm run build
-      - name: Deploy to Github Pages
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN  }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: lvxl-pages
+          # 每次部署只保留一个提交，避免 lvxl-pages 分支历史无限增长
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
