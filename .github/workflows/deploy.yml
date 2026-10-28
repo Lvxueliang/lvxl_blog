@@ -35,9 +35,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check-branch
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
       - name: set-Node
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v4
         with:
           node-version: 18.16.0
           registry-url: https://registry.npmjs.org/ # 如果不配置将影响publish

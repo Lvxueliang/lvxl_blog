@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -10,13 +11,18 @@ const config = {
   tagline: 'Love for Wx1n',
   favicon: 'img/favicon.ico',
 
-  url: 'https://lvxueliang.github.io',    // 当前页面的url，setting里面 都可以看到部署后的url
-  baseUrl: '/',   // 这里看自己需要添加，如果添加为/win/  访问主页就是 https://yingwinwin.github.io/win/
+  url: 'https://lvxueliang.github.io/',    // 当前页面的url，setting里面 都可以看到部署后的url
+  baseUrl: '/lvxl_blog/',   // 这里看自己需要添加，如果添加为/win/  访问主页就是 https://yingwinwin.github.io/win/
   organizationName: 'lvxueliang', // 这里是你github的名字
-  projectName: 'lvxueliang.github.io', // 这个是你要部署到的github的项目名字
-  deploymentBranch: "lv-pages",
+  projectName: 'lvxl_blog', // 这个是你要部署到的github的项目名字
+  deploymentBranch: "lvxl-pages",
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    format: 'detect', // .md 按普通 Markdown 解析，只有 .mdx 才按 MDX 解析
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -79,7 +85,7 @@ const config = {
             items: [
               {
                 label: '学习之道',
-                to: '/docs/index',
+                to: '/docs',
               },
             ],
           },
