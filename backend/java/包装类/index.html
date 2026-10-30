@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-backend docs-version-current docs-doc-page docs-doc-id-java/包装类" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">包装类 | Lvxl</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://blog.lvxl.eu.org/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://blog.lvxl.eu.org/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://blog.lvxl.eu.org/backend/java/包装类"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-backend-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-backend-current"><meta data-rh="true" property="og:title" content="包装类 | Lvxl"><meta data-rh="true" name="description" content="包装类"><meta data-rh="true" property="og:description" content="包装类"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://blog.lvxl.eu.org/backend/java/包装类"><link data-rh="true" rel="alternate" href="https://blog.lvxl.eu.org/backend/java/包装类" hreflang="en"><link data-rh="true" rel="alternate" href="https://blog.lvxl.eu.org/backend/java/包装类" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"JAVA","item":"https://blog.lvxl.eu.org/backend/category/java"},{"@type":"ListItem","position":2,"name":"包装类","item":"https://blog.lvxl.eu.org/backend/java/包装类"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Lvxl RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Lvxl Atom Feed">
+
+
+
+
+
+<link rel="alternate" type="application/rss+xml" href="/question/rss.xml" title="Lvxl RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/question/atom.xml" title="Lvxl Atom Feed"><link rel="stylesheet" href="/assets/css/styles.1355c501.css">
+<script src="/assets/js/runtime~main.3740534c.js" defer="defer"></script>
+<script src="/assets/js/main.fa00b72a.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_z4ZA" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.jpeg" alt="Lvxl Logo" class="themedComponent_wcdf themedComponent--light_U1DN"><img src="/img/logo.jpeg" alt="Lvxl Logo" class="themedComponent_wcdf themedComponent--dark_shDJ"></div><b class="navbar__title text--truncate">Lvxl</b></a><a class="navbar__item navbar__link" href="/front">前端知识库</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/backend">后端知识库</a><a class="navbar__item navbar__link" href="/blog">面试之道</a><a class="navbar__item navbar__link" href="/question">题目</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Lvxueliang/lvxl_blog" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_gbhg"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_UNac colorModeToggle_TG5q"><button class="clean-btn toggleButton_S6F6 toggleButtonDisabled_nlSj" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_kKvO lightToggleIcon__aS5"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_kKvO darkToggleIcon_qvGP"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_kKvO systemToggleIcon_C3RG"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_FRdd"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_PhPw"><div class="docsWrapper_hlgM"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_mXAS" type="button"></button><div class="docRoot_ORyW"><aside class="theme-doc-sidebar-container docSidebarContainer_k24F"><div class="sidebarViewport_N56_"><div class="sidebar_OAhl"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SyQz"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/backend/"><span class="linkLabel_vRmX">java</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_aqw1 menu__link menu__link--sublist menu__link--active" href="/backend/category/java"><span class="categoryLinkLabel_W219">JAVA</span></a><button aria-label="Collapse sidebar category &#x27;JAVA&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/数据类型"><span class="linkLabel_vRmX">java数据类型</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/代码块"><span class="linkLabel_vRmX">代码块</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/运算符"><span class="linkLabel_vRmX">运算符</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/面向对象"><span class="linkLabel_vRmX">面向对象</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/backend/java/包装类"><span class="linkLabel_vRmX">包装类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/集合"><span class="linkLabel_vRmX">Collection 单列集合</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/Map"><span class="linkLabel_vRmX">Map集合 双列集合</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/backend/java/interface"><span class="linkLabel_vRmX">interface</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_moVp"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_jzEw"><div class="docItemContainer_hqP9"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_ofD4" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_pymW"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/backend/category/java"><span>JAVA</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">包装类</span></li></ul></nav><div class="tocCollapsible_v3EP theme-doc-toc-mobile tocMobile_jbMw"><button type="button" class="clean-btn tocCollapsibleButton_TajN">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>包装类</h1></header><h2 class="anchor anchorTargetStickyNavbar__dqU" id="包装类">包装类<a href="#包装类" class="hash-link" aria-label="Direct link to 包装类" title="Direct link to 包装类" translate="no">​</a></h2>
+<ul>
+<li class="">包装类的分类
+<ol>
+<li class="">针对八种基本数据类型相应的引用类型——包装类；</li>
+<li class="">有了类的特点， 就是可以调用类中的方法；</li>
+</ol>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:center">基本数据类型</th><th style="text-align:center">包装类</th></tr></thead><tbody><tr><td style="text-align:center">boolean</td><td style="text-align:center">Boolean</td></tr><tr><td style="text-align:center">char</td><td style="text-align:center">Charcater</td></tr><tr><td style="text-align:center">byte</td><td style="text-align:center">Byte</td></tr><tr><td style="text-align:center">short</td><td style="text-align:center">Short</td></tr><tr><td style="text-align:center">int</td><td style="text-align:center">Integer</td></tr><tr><td style="text-align:center">long</td><td style="text-align:center">Long</td></tr><tr><td style="text-align:center">float</td><td style="text-align:center">Float</td></tr><tr><td style="text-align:center">double</td><td style="text-align:center">Double</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar__dqU" id="string">String<a href="#string" class="hash-link" aria-label="Direct link to String" title="Direct link to String" translate="no">​</a></h3>
+<ul>
+<li class="">String对象用于保存字符串，也就一组字符序列</li>
+<li class="">字符串的字符使用“Unicode”字符编码，一个字符（不区分字母还是汉字）占两个字节</li>
+<li class="">String 类有很多构造器， 构造器的重载
+<ul>
+<li class="">String s1 = new String()</li>
+<li class="">String s2 = new String(char[] a);</li>
+<li class="">String s3 = new String(char[] a, int startIndex, int count)</li>
+<li class="">String s4 = new String(String original)</li>
+<li class="">String s5 = new String(byte[] b)</li>
+</ul>
+</li>
+<li class="">String 类实现了接口 Serializable (String 可以串行化： 可以在网络传输)</li>
+<li class="">---------------------接口 Comparable (String 对象可以比较大小)</li>
+<li class="">String 是个final类 不可被继承</li>
+<li class="">String 有属性 private final char value[]; 用于存放字符串内容</li>
+<li class="">一定要注意：value 是个final类型， 不可以修改 （指的是地址不可以改）</li>
+</ul>
+<div class="language-java codeBlockContainer_hOO6 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_pQOs"><pre tabindex="0" class="prism-code language-java codeBlock_C7gK thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_kGwb"><div class="token-line" style="color:#393A34"><span class="token plain">Strings s = &quot;lvxl&quot;;</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 先从常量池中查找是否有lvxl的数据空间， 如果有， 直接指向， 如果没有则重新创建， 并指向</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">String s2 = new String(&quot;lvxl&quot;);</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 先在堆中创建空间，里面维护了了value属性，指向常量池中的lvxl， 如果常量池中没有lvxl，重新创建，如果有， 通过value指向，最终指向的是堆中的空间地址</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">String a = &quot;abc&quot;;</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">String b = &quot;abc&quot;;</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">System.out.println(a.equals(b)); // true</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">System.out.println(a == b); // true</span><br></div></code></pre></div></div>
+<h4 class="anchor anchorTargetStickyNavbar__dqU" id="stringformat">String.format<a href="#stringformat" class="hash-link" aria-label="Direct link to String.format" title="Direct link to String.format" translate="no">​</a></h4>
+<ol>
+<li class="">%s 格式化字符串</li>
+<li class="">%d 格式化整数</li>
+<li class="">%f 格式化浮点数</li>
+<li class="">%c 格式化字符</li>
+<li class="">%% 格式化百分号</li>
+<li class="">%.2f 格式化保留两位小数的浮点数</li>
+</ol>
+<h1>StringBuffer</h1>
+<ol>
+<li class="">stringBuffer的直接父类是AbstractStringBuilder</li>
+<li class="">StringBuffer 实现了 Srializable ，即StringBuffer的对象可以串行化</li>
+<li class="">在父类中， AbstractStringBuilder 有属性 char[] value, 不是final; 该value数组存放 字符串内容， 引出存放在堆中的</li>
+<li class="">StringBuffer 是一个final类， 不能被继承</li>
+<li class="">StringBuffer字符串内容存在char[] value， 所有在变化 （add/delete）；不用每次豆更换地址（即不是每次豆创建新对象） ， 所以效率高于String</li>
+</ol>
+<div class="language-java codeBlockContainer_hOO6 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_pQOs"><pre tabindex="0" class="prism-code language-java codeBlock_C7gK thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_kGwb"><div class="token-line" style="color:#393A34"><span class="token plain">// 1. 创建一个 大小为 16的 char数组 value</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">StringBuffer sb = new StringBuffer();</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 2. 通过构造器指定 char[] 大小</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">StringBuffer sb2 = new StringBuffer(100);</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 3. 通过给一个String 创建 StringBuffer , char[] 大小就是 str.length() + 16</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">StringBuffer sb3 = new StringBuffer(&quot;lvxl&quot;);</span><br></div></code></pre></div></div>
+<h4 class="anchor anchorTargetStickyNavbar__dqU" id="stringbuffer-类型转换">StringBuffer 类型转换<a href="#stringbuffer-类型转  换" class="hash-link" aria-label="Direct link to StringBuffer 类型转换" title="Direct link to StringBuffer 类型转换" translate="no">​</a></h4>
+<div class="language-java codeBlockContainer_hOO6 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_pQOs"><pre tabindex="0" class="prism-code language-java codeBlock_C7gK thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_kGwb"><div class="token-line" style="color:#393A34"><span class="token plain">// String -&gt; StringBuffer</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">String str = &quot;hello world&quot;;</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 1. 通过构造器将String 转换为 StringBuffer</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">StringBuffer sb = new StringBuffer(str);</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 2. 通过toString方法将StringBuffer 转换为String</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">StringBuffer sb2 = new StringBuffer();</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">sb2.append(str);</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// StringBuffer -&gt; String</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 1.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">String s2 = sb.toString();</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">// 2.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">String s3 = new String(sb);</span><br></div></code></pre></div></div>
+<h4 class="anchor anchorTargetStickyNavbar__dqU" id="stringbuffer方法">StringBuffer方法<a href="#stringbuffer方法" class="hash-link" aria-label="Direct link to StringBuffer方法" title="Direct link to StringBuffer方法" translate="no">​</a></h4>
+<ol>
+<li class="">append(String str) ： 将字符串str追加到当前Buffer的末尾</li>
+<li class="">insert(int offset, String str) ： 将字符串str插入到当前Buffer的指定位置</li>
+<li class="">delete(int start, int end) ： 删除当前Buffer中从start到end的字符 （不包含end）</li>
+<li class="">reverse() ： 反转当前Buffer中的字符</li>
+<li class="">replace(int start, int end, String str) ： 替换当前Buffer中从start到end的字符 （不包含end）为字符串str</li>
+<li class="">indexOf(String str) ： 返回找字符串str在当前Buffer中的第一个出现位置 如果找不到返回-1</li>
+<li class="">length() ： 返回当前Buffer的长度</li>
+</ol>
+<h1>StringBuilder</h1>
+<ol>
+<li class="">一个可变的字符串序列,此类提供一个与StringBuffer兼容的Api， 但不保证同步安全， <code>用在字符串缓冲区被单线程使用的时候</code>，如果可能，优先使用StringBuilder，大多数现实中， StringBuilder的效率高于StringBuffer。</li>
+<li class="">StringBuilder上的主要操作是append 和 insert 方法，可以重载这些方法，以接受任意类型的数据；</li>
+<li class="">实现了 Serializable 接口，即 StringBuilder 的对象可以串行化；</li>
+<li class="">是一个final类， 不能被继承</li>
+<li class="">对象字符序列荏苒是存放在其父类AbstractStringBuilder 中的 char[] value 中</li>
+<li class="">没有做互斥处理， 即没有 synchronized 关键字, 因此在单线程环境下使用， StringBuilder 是一个效率较高的选择。</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar__dqU" id="string-stringbuilder-stringbuffer-的选择">String StringBuilder StringBuffer 的选择<a href="#string-stringbuilder-stringbuffer-的选择" class="hash-link" aria-label="Direct link to String StringBuilder StringBuffer 的选择" title="Direct link to String StringBuilder StringBuffer 的选择" translate="no">​</a></h3>
+<ol>
+<li class="">如果字符串存在大量的修改操作，一般使用StringBuffer 或 StringBuilder</li>
+<li class="">如果字符串存在大量的修改操作，并在单线程环境下使用，一般使用StringBuilder</li>
+<li class="">如果字符串存在大量的修改操作，并在多线程环境下使用，一般使用StringBuffer</li>
+<li class="">如果字符串很少修改，被多个对象引用，使用String， 比如配置信息等</li>
+</ol>
+<h1>Arrays 类</h1>
+<h3 class="anchor anchorTargetStickyNavbar__dqU" id="arrays方法">Arrays方法<a href="#arrays方法" class="hash-link" aria-label="Direct link to Arrays方法" title="Direct link to Arrays方法" translate="no">​</a></h3>
+<ol>
+<li class="">Arrays.toString(arr) ： 将数组转换为字符串</li>
+<li class="">Arrays.sort(arr) ： 对数组进行排序</li>
+<li class="">Arrays.sort(arr, Comparator) ： 对数组进行排序， 并指定排序规则</li>
+<li class="">Arrays.binarySearch(arr, value) ： 对数组进行二分查找， 返回值为索引, 如果找不到返回-1 ,数组必须有序</li>
+<li class="">Arrays.copyOf(arr, newLength) ： 复制数组， 并指定新的长度, 返回值为新数组</li>
+<li class="">Arrays.fill(arr, value) ： 填充数组， 并指定填充值</li>
+<li class="">Arrays.equals(arr1, arr2) ： 对比两个数组是否相等， 返回值为boolean类型</li>
+<li class="">Arrays.asList(arr) ： 将数组转换为List集合， 返回值为List类型</li>
+</ol>
+<h1>System 类</h1>
+<h1>BigInteger 类</h1></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/backend/java/面向对象"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">面向对象</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/backend/java/集合"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Collection 单列集合</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bV4G thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#包装类" class="table-of-contents__link toc-highlight">包装类</a><ul><li><a href="#string" class="table-of-contents__link toc-highlight">String</a></li><li><a href="#string-stringbuilder-stringbuffer-的选择" class="table-of-contents__link toc-highlight">String StringBuilder StringBuffer 的选择</a></li><li><a href="#arrays方法" class="table-of-contents__link toc-highlight">Arrays方法</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Lvxl</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/front">学习之道</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_gbhg"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_gbhg"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_gbhg"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_gbhg"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
